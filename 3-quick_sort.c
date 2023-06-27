@@ -1,9 +1,12 @@
 #include "sort.h"
 
 /**
-* swap_ints - swap the int values of two addresses
-* @a: pointer to an int
-* @b: pointer to an int
+* swap_ints - Swaps the values of two integer pointers.
+* @a: Pointer to the first integer.
+* @b: Pointer to the second integer.
+*
+* Description: This function swaps the values of the integers
+* pointed to by 'a' and 'b'.
 */
 void swap_ints(int *a, int *b)
 {
@@ -15,14 +18,16 @@ void swap_ints(int *a, int *b)
 }
 
 /**
-* partition - find and return the the index of the pivot
-* which is the middle index for dividing array
-* @array: half of array of integers
-* @size: length of the array
-* @left_i: left-most of half
-* @right_i: right-most of half
+* partition - Finds and returns the index of the pivot, which
+* is the middle index for dividing the array.
+* @array: The array of integers.
+* @size: The size of the array.
+* @left_i: The left-most index of the partition.
+* @right_i: The right-most index of the partition.
 *
-* Return: size_t
+* Return: The pivot index.
+*
+* Description: This function is used in the Quick Sort algorithm.
 */
 size_t partition(
 	int *array, size_t size,
@@ -48,11 +53,14 @@ size_t partition(
 }
 
 /**
-* sort - sort elements on the left and right of partition
-* @array: array of integers
-* @size: length of the array
-* @left_i: left-most boundary of array
-* @right_i: right-most boundary of array
+* sort - Sorts the elements on the left and right of the partition.
+* @array: The array of integers.
+* @size: The size of the array.
+* @left_i: The left-most boundary of the array.
+* @right_i: The right-most boundary of the array.
+*
+* Description: This function is a helper function used in the
+* Quick Sort algorithm.
 */
 void sort(
 	int *array, size_t size,
@@ -71,10 +79,13 @@ void sort(
 }
 
 /**
-* quick_sort - using quick sort algorithm to
-* sort an array of integers with lomuto partiioning
-* @array: array of integers
-* @size: length of the array
+* quick_sort - Sorts an array of integers using the Quick Sort
+* algorithm with Lomuto partitioning.
+* @array: The array of integers.
+* @size: The size of the array.
+*
+* Description: This function implements the Quick Sort algorithm to
+* sort the array in ascending order.
 */
 void quick_sort(int *array, size_t size)
 {
